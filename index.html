@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        table {
+            /* Линия между ячейками отображается только одна */
+            border-collapse: collapse;
+            min-width: 900px;
+        }
+
+        .total-td {
+            /* Выравнивание текста по правому краю */
+            text-align: right;
+            /* Внутренний отступ справа */
+            padding-right: 50px;
+        }
+
+        thead {
+            /* Цвет фона */
+            background-color: chocolate;
+            /* Цвет текста */
+            color: white;
+        }
+
+        tfoot {
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="price">
+        <caption>Товары</caption>
+        <thead>
+            <tr>
+                <th>№ п/п</th>
+                <th>Наименование товара</th>
+                <th>Ед. измерения</th>
+                <th>Количество</th>
+                <th>Цена за ед. измерения</th>
+                <th>Стоимость</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Томаты</td>
+                <td rowspan="3">кг</td>
+                <td>10</td>
+                <td>50</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Огурцы</td>
+                <td>10</td>
+                <td>80</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Яблоки</td>
+                <td>5</td>
+                <td>100</td>
+                <td>500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Итого</td>
+                <td class="total-td" colspan="5">1800</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
